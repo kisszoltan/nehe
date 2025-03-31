@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-import { siteConfig } from "@//config/site";
+import { siteConfig } from "@/shared/site";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

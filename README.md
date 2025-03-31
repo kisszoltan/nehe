@@ -26,7 +26,7 @@ This is a template for creating applications using Next.js 14 (app directory) an
 To create a new project based on this template using `create-next-app`, run the following command:
 
 ```bash
-npx create-next-app -e https://github.com/heroui-inc/next-app-template
+pnpm exec create-next-app -e https://github.com/kisszoltan/nehe
 ```
 
 ### Install dependencies
@@ -34,13 +34,13 @@ npx create-next-app -e https://github.com/heroui-inc/next-app-template
 You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Run the development server
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ### Setup pnpm (optional)

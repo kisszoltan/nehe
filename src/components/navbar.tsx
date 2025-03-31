@@ -20,7 +20,7 @@ import { SearchInput } from "./search-input";
 import { Donate } from "./donate";
 import { Logo } from "./logo";
 
-import { siteConfig } from "@//config/site";
+import { siteConfig } from "@/shared/site";
 import { ThemeSwitch } from "@//components/theme-switch";
 
 export const Navbar = () => {

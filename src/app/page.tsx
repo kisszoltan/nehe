@@ -4,7 +4,7 @@ import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 import { Icon } from "@iconify/react";
 
-import { siteConfig } from "@//config/site";
+import { siteConfig } from "@/shared/site";
 import { title, subtitle } from "@//components/primitives";
 
 export default function Home() {
@@ -35,12 +35,11 @@ export default function Home() {
           Documentation
         </Link>
         <Link
-          isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
+          href="/auth/signin"
         >
-          <Icon icon="proicons:github" />
-          GitHub
+          <Icon icon="proicons:person" />
+          Login
         </Link>
       </div>
 

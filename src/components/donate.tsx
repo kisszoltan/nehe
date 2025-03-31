@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 import { Button, Tooltip } from "@heroui/react";
 import Link from "next/link";
 
-import { siteConfig } from "@//config/site";
+import { siteConfig } from "@/shared/site";
 
 export const Donate = () => {
   return (
