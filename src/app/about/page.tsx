@@ -5,10 +5,10 @@ export default async function AboutPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = (await params) ?? { locale: "en" };
+  const { locale } = await params;
 
   try {
-    const Content = (await import(`./${locale}.mdx`)).default;
+    const Content = (await import(`./${locale ?? "en"}.mdx`)).default;
 
     return (
       <section className="flex flex-col gap-4">
