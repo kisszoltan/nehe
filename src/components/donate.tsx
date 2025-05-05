@@ -3,29 +3,23 @@
 import { Icon } from "@iconify/react";
 import { Button, Tooltip } from "@heroui/react";
 import Link from "next/link";
+import { useMessages, useTranslations } from "next-intl";
 
 import { siteConfig } from "@/shared/site";
 
 export const Donate = () => {
+  const t = useTranslations("Donate");
+  const messages = useMessages();
+  const idx = Object.keys(messages.Donate.desc);
+
   return (
     <Tooltip
       content={
         <div className="flex flex-col gap-1 px-1 py-2 max-w-xs">
-          <div className="text-medium font-bold">
-            Kiss Csillag Public Benefit Foundation
-          </div>
-          <div>
-            This website was created, developed and operated by Kiss-Hanzsa Ltd.
-            This company supports the Kiss Csillag Public Benefit Foundation
-            operating in Deszk (Hungary) with a minimum of 10% of its income.
-          </div>
-          <div>
-            The foundation helps disadvantaged families or single people through
-            voluntary donations. With financial support, we contribute to the
-            operating costs of the foundation (vehicle and warehouse rental and
-            maintenance, employee salaries, etc.).
-          </div>
-          <div>Click here and get to know the foundation yourself.</div>
+          <div className="text-medium font-bold">{t("title")}</div>
+          {idx.map((key) => (
+            <div key={key}>{t(`desc.${key}`)}</div>
+          ))}
         </div>
       }
       delay={1000}
@@ -40,7 +34,7 @@ export const Donate = () => {
         target="_blank"
         variant="flat"
       >
-        Donate
+        {t("Donate")}
       </Button>
     </Tooltip>
   );

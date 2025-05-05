@@ -1,0 +1,42 @@
+{
+  "HomePage": {
+    "Beautiful, fast and modern React UI library": "Gyönyörű, gyors és modern React UI könyvtár."
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, hu {🇭🇺 Magyar} en {🇺🇸 Angol} other {Ismeretlen}}",
+    "label": "Válts nyelvet"
+  },
+  "Navbar": {
+    "Home": "Nyitóoldal",
+    "Docs": "Dokumentáció",
+    "Pricing": "Árak",
+    "Blog": "Blog",
+    "About": "Rólunk",
+    "Profile": "Profil",
+    "Dashboard": "Irányítópult",
+    "Projects": "Projektek",
+    "Team": "Csapat",
+    "Calendar": "Naptár",
+    "Settings": "Beállítások",
+    "Help & Feedback": "Segítség & Visszajelzés",
+    "Logout": "Kijelentkezés"
+  },
+  "SearchInput": {
+    "Search": "Keresés..."
+  },
+  "Donate": {
+    "Donate": "Támogatás",
+    "title": "Kiss Csillag Közhasznú Alapítvány",
+    "desc": {
+      "0": "Ezt a weboldalt a Kiss-Hanzsa Kft. készítette, fejlesztette és üzemelteti. A cég bevételének legalább 10%-ával támogatja a Deszken (Magyarország) működő Kiss Csillag Közhasznú Alapítványt.",
+      "1": "Az alapítvány önkéntes adományokkal segíti a hátrányos helyzetű családokat vagy egyedülálló embereket. Pénzügyi támogatással hozzájárulunk az alapítvány működési költségeihez (jármű- és raktár bérlés/karbantartás, alkalmazottak bére stb.).",
+      "2": "Kattints ide és ismerd meg magad az alapítványt."
+    }
+  },
+  "Footer": {
+    "All rights reserved": "©{year} Kiss-Hanzsa Kft. - Minden jog fenntartva.",
+    "Terms": "ÁSzF",
+    "Privacy": "Adatkezelés",
+    "Cookies": "Cookies"
+  }
+}

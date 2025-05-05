@@ -1,11 +1,8 @@
+import { getLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 
-export default async function CookiesPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await params;
+export default async function CookiesPage() {
+  const locale = await getLocale();
 
   try {
     const Content = (await import(`./${locale ?? "ne"}.mdx`)).default;

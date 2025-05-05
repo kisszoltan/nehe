@@ -3,12 +3,15 @@ import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/shared/site";
 import { subtitle } from "@//components/primitives";
 import { HighlightTitle } from "@/components/highlight-title";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
@@ -18,7 +21,7 @@ export default function Home() {
           text="Make beautiful websites regardless of your design experience."
         />
         <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+          {t("Beautiful, fast and modern React UI library")}
         </div>
       </div>
 

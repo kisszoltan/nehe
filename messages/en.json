@@ -1,0 +1,42 @@
+{
+  "HomePage": {
+    "Beautiful, fast and modern React UI library": "Beautiful, fast and modern React UI library."
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, hu {🇭🇺 Hungarian} en {🇺🇸 English} other {Unknown}}",
+    "label": "Switch language"
+  },
+  "Navbar": {
+    "Home": "Home",
+    "Docs": "Docs",
+    "Pricing": "Pricing",
+    "Blog": "Blog",
+    "About": "About",
+    "Profile": "Profile",
+    "Dashboard": "Dashboard",
+    "Projects": "Projects",
+    "Team": "Team",
+    "Calendar": "Calendar",
+    "Settings": "Settings",
+    "Help & Feedback": "Help & Feedback",
+    "Logout": "Logout"
+  },
+  "SearchInput": {
+    "Search": "Search..."
+  },
+  "Donate": {
+    "Donate": "Donate",
+    "title": "Kiss Csillag Public Benefit Foundation",
+    "desc": {
+      "0": "This website was created, developed and operated by Kiss-Hanzsa Ltd. This company supports the Kiss Csillag Public Benefit Foundation operating in Deszk (Hungary) with a minimum of 10% of its income.",
+      "1": "The foundation helps disadvantaged families or single people through voluntary donations. With financial support, we contribute to the operating costs of the foundation (vehicle and warehouse rental and maintenance, employee salaries, etc.).",
+      "2": "Click here and get to know the foundation yourself."
+    }
+  },
+  "Footer": {
+    "All rights reserved": "©{year} Kiss-Hanzsa Ltd. - All rights reserved.",
+    "Terms": "Terms and Conditions",
+    "Privacy": "Privacy",
+    "Cookies": "Cookies"
+  }
+}

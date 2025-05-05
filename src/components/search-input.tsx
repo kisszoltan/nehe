@@ -2,11 +2,14 @@
 
 import { Input, Kbd } from "@heroui/react";
 import { Icon } from "@iconify/react";
+import { useTranslations } from "next-intl";
 import { FC } from "react";
 
 const SEARCH_ENABLED = true;
 
 export const SearchInput: FC = () => {
+  const t = useTranslations("SearchInput");
+
   return (
     SEARCH_ENABLED && (
       <Input
@@ -21,7 +24,7 @@ export const SearchInput: FC = () => {
           </Kbd>
         }
         labelPlacement="outside"
-        placeholder="Search..."
+        placeholder={t("Search")}
         startContent={
           <Icon
             className="text-base text-default-400 pointer-events-none flex-shrink-0"

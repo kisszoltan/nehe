@@ -15,6 +15,7 @@ import NextLink from "next/link";
 import clsx from "clsx";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { SearchInput } from "./search-input";
 import { Donate } from "./donate";
@@ -25,6 +26,7 @@ import { ThemeSwitch } from "@//components/theme-switch";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const t = useTranslations("Navbar");
 
   return (
     <HeroUINavbar
@@ -53,7 +55,7 @@ export const Navbar = () => {
                 color="foreground"
                 href={item.href}
               >
-                {item.label}
+                {t(item.label)}
               </NextLink>
             </NavbarItem>
           ))}
@@ -101,9 +103,9 @@ export const Navbar = () => {
                 color="foreground"
                 href={item.href}
                 size="lg"
-                onClick={() => setIsMenuOpen(false)}
+                onPress={() => setIsMenuOpen(false)}
               >
-                {item.label}
+                {t(item.label)}
               </Link>
             </NavbarMenuItem>
           ))}
