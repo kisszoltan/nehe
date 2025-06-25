@@ -10,9 +10,8 @@ import {
   NavbarMenuItem,
 } from "@heroui/navbar";
 import { Link } from "@heroui/link";
-import { link as linkStyles } from "@heroui/theme";
+import { cn, link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -23,8 +22,10 @@ import { Logo } from "./logo";
 
 import { siteConfig } from "@/shared/site";
 import { ThemeSwitch } from "@//components/theme-switch";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const path = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const t = useTranslations("Navbar");
 
@@ -48,11 +49,17 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                className={cn(
+                  linkStyles({
+                    color:
+                      (item.href === "/" && path === "/") ||
+                      (item.href !== "/" && path.startsWith(item.href))
+                        ? "primary"
+                        : "foreground",
+                    size: "lg",
+                    underline: "hover",
+                  })
                 )}
-                color="foreground"
                 href={item.href}
               >
                 {t(item.label)}
@@ -62,10 +69,7 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <Icon className="text-default-500" icon="proicons:x-twitter" />
