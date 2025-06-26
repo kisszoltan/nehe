@@ -15,14 +15,14 @@ import NextLink from "next/link";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { SearchInput } from "./search-input";
 import { Donate } from "./donate";
 import { Logo } from "./logo";
 
 import { siteConfig } from "@/shared/site";
-import { ThemeSwitch } from "@//components/theme-switch";
-import { usePathname } from "next/navigation";
+import { ThemeSwitch } from "@/components/theme-switch";
 
 export const Navbar = () => {
   const path = usePathname();
@@ -58,7 +58,7 @@ export const Navbar = () => {
                         : "foreground",
                     size: "lg",
                     underline: "hover",
-                  })
+                  }),
                 )}
                 href={item.href}
               >
@@ -69,7 +69,10 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
+      <NavbarContent
+        className="hidden sm:flex basis-1/5 sm:basis-full"
+        justify="end"
+      >
         <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.twitter}>
             <Icon className="text-default-500" icon="proicons:x-twitter" />
