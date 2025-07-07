@@ -1,10 +1,10 @@
-import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 
+import { Link } from "@/components/ui/link";
 import { siteConfig } from "@/shared/site";
 import { H1, BodyMedium } from "@/components/ui/typography";
 

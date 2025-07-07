@@ -10,6 +10,7 @@ import { siteConfig } from "@/shared/site";
 import { fontSans } from "@/shared/fonts";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { PageLoading } from "@/components/ui/page-loading";
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +57,7 @@ export default async function RootLayout({
         <NextIntlClientProvider>
           <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
             <div className="relative flex flex-col h-screen">
+              <PageLoading />
               <Navbar />
               <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
                 {children}

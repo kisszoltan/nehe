@@ -1,10 +1,11 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Button, Input, Link, Form, addToast } from "@heroui/react";
+import { Button, Input, Form, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { useSearchParams } from "next/navigation";
 
+import { Link } from "@/components/ui/link";
 import { useAuth } from "@/shared/auth";
 import { Logo } from "@/components/ui/logo";
 

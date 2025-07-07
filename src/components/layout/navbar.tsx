@@ -9,9 +9,7 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Link } from "@heroui/link";
 import { cn, link as linkStyles } from "@heroui/theme";
-import NextLink from "next/link";
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
@@ -22,6 +20,7 @@ import { Donate } from "@/components/widgets/donate";
 import { Logo } from "@/components/ui/logo";
 import { siteConfig } from "@/shared/site";
 import { ThemeSwitch } from "@/components/widgets/theme-switch";
+import { Link } from "@/components/ui/link";
 
 export const Navbar = () => {
   const path = usePathname();
@@ -37,17 +36,17 @@ export const Navbar = () => {
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <Link className="flex justify-start items-center gap-1" href="/">
             <Logo />
             <p className="font-bold text-inherit block sm:hidden lg:block">
               {siteConfig.shortName}
             </p>
-          </NextLink>
+          </Link>
         </NavbarBrand>
         <ul className="hidden sm:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <Link
                 className={cn(
                   linkStyles({
                     color:
@@ -62,7 +61,7 @@ export const Navbar = () => {
                 href={item.href}
               >
                 {t(item.label)}
-              </NextLink>
+              </Link>
             </NavbarItem>
           ))}
         </ul>

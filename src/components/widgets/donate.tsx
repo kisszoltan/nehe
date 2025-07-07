@@ -2,9 +2,9 @@
 
 import { Icon } from "@iconify/react";
 import { Button, Tooltip } from "@heroui/react";
-import Link from "next/link";
 import { useMessages, useTranslations } from "next-intl";
 
+import { Link } from "@/components/ui/link";
 import { siteConfig } from "@/shared/site";
 
 export const Donate = () => {

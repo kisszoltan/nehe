@@ -1,9 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { Button, Input, Checkbox, Link, Form, addToast } from "@heroui/react";
+import { Button, Input, Checkbox, Form, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
+import { Link } from "@/components/ui/link";
 import { useAuth } from "@/shared/auth";
 import { Logo } from "@/components/ui/logo";
 
