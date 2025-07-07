@@ -40,6 +40,7 @@ function storeUser(email: string) {
   localStorage.setItem(
     "user",
     JSON.stringify({
+      username: "test",
       email,
       image: "https://i.pravatar.cc/300?img=47",
     }),

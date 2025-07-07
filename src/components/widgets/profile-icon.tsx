@@ -42,14 +42,18 @@ export const ProfileIcon: FC = () => {
               key="profile"
               as={Link}
               className="h-14 gap-2"
-              href="/settings"
+              href={`/@${user?.username}`}
             >
               <p className="font-semibold">
                 {t("Signed in as", { email: user?.email ?? "" })}
               </p>
             </DropdownItem>
-            <DropdownItem key="settings" as={Link} href="/settings">
-              {t("Settings")}
+            <DropdownItem
+              key="dashboard"
+              as={Link}
+              href={`/@${user?.username}`}
+            >
+              {t("Dashboard")}
             </DropdownItem>
             <DropdownItem key="logout" color="danger" onPress={() => signOut()}>
               {t("Log Out")}

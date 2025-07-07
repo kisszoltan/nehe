@@ -1,1 +1,1 @@
-export type User = { email: string; image?: string };
+export type User = { username: string; email: string; image?: string };
