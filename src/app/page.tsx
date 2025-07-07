@@ -6,23 +6,20 @@ import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/shared/site";
-import { subtitle } from "@/components/ui/primitives";
-import { HighlightTitle } from "@/components/ui/highlight-title";
+import { H1, BodyMedium } from "@/components/ui/typography";
 
 export default function Home() {
   const t = useTranslations("HomePage");
 
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <HighlightTitle
-          color="violet"
-          match="beautiful"
-          text="Make beautiful websites regardless of your design experience."
-        />
-        <div className={subtitle({ class: "mt-4" })}>
+      <div className="inline-block max-w-4xl text-center justify-center space-y-4">
+        <H1>
+          {t("Make beautiful websites regardless of your design experience")}
+        </H1>
+        <BodyMedium>
           {t("Beautiful, fast and modern React UI library")}
-        </div>
+        </BodyMedium>
       </div>
 
       <div className="flex gap-3">

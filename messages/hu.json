@@ -1,10 +1,23 @@
 {
   "HomePage": {
+    "Make beautiful websites regardless of your design experience": "Készíts gyönyörű weboldalakat a dizájner tapasztalatodtól függetlenül.",
     "Beautiful, fast and modern React UI library": "Gyönyörű, gyors és modern React UI könyvtár."
   },
   "LocaleSwitcher": {
     "locale": "{locale, select, hu {🇭🇺 Magyar} en {🇺🇸 Angol} other {Ismeretlen}}",
     "label": "Válts nyelvet"
+  },
+  "Loading": {
+    "Loading": "{name} betöltése folyamatban..."
+  },
+  "NotFound": {
+    "This page could not be found": "A keresett lap nem található",
+    "Go Back": "Vissza"
+  },
+  "Error": {
+    "Error": "Hiba történt",
+    "Something went wrong": "Valami nem sikerült az oldal betöltés során!",
+    "Try again": "Próbáld újra"
   },
   "Navbar": {
     "Home": "Nyitóoldal",

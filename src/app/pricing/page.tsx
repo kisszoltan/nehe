@@ -1,9 +1,9 @@
-import { title } from "@/components/ui/primitives";
+import { H1 } from "@/components/ui/typography";
 
 export default function PricingPage() {
   return (
     <div>
-      <h1 className={title()}>Pricing</h1>
+      <H1>Pricing</H1>
     </div>
   );
 }

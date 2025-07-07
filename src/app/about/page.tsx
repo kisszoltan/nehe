@@ -9,7 +9,7 @@ export default async function AboutPage() {
 
     return (
       <section className="flex flex-col gap-4">
-        <article className="prose dark:prose-invert bg-background max-w-full">
+        <article className="prose dark:prose-invert prose-th:bg-default-50 prose-table:border prose-td:p-2 prose-th:p-2 bg-background max-w-full">
           <Content />
         </article>
       </section>

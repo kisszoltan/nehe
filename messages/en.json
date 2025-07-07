@@ -1,10 +1,23 @@
 {
   "HomePage": {
+    "Make beautiful websites regardless of your design experience": "Make beautiful websites regardless of your design experience.",
     "Beautiful, fast and modern React UI library": "Beautiful, fast and modern React UI library."
   },
   "LocaleSwitcher": {
     "locale": "{locale, select, hu {🇭🇺 Hungarian} en {🇺🇸 English} other {Unknown}}",
     "label": "Switch language"
+  },
+  "Loading": {
+    "Loading": "Loading {name}..."
+  },
+  "NotFound": {
+    "This page could not be found": "This page could not be found",
+    "Go Back": "Go Back"
+  },
+  "Error": {
+    "Error": "Error",
+    "Something went wrong": "Something went wrong!",
+    "Try again": "Try again"
   },
   "Navbar": {
     "Home": "Home",
