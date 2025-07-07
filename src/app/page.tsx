@@ -36,7 +36,7 @@ export default function Home() {
         </Link>
         <Link
           className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href="/auth/signin"
+          href="/auth/login"
         >
           <Icon icon="proicons:person" />
           Login

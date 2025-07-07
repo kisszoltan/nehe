@@ -51,5 +51,32 @@
     "Terms": "ÁSzF",
     "Privacy": "Adatkezelés",
     "Cookies": "Cookies"
+  },
+  "ProfileIcon": {
+    "Profile Actions": "Profil Műveletek",
+    "Signed in as": "Bejelentkezve mint {email}",
+    "Settings": "Beállítások",
+    "Log Out": "Kilpés",
+    "Sign In": "Bejelentkezés"
+  },
+  "AuthPages": {
+    "Login failed": "Sikertelen bejelentkezés",
+    "Welcome Back": "Üdvözlünk újra itt",
+    "Log in to your account to continue": "A folytatáshoz jelentkezz be a fiókodba",
+    "Email Address": "Email cím",
+    "Enter your email": "Írd be az email címed",
+    "Password": "Jelszó",
+    "Enter your password": "Add meg a jelszavad",
+    "Sign In": "Bejelentkezés",
+    "Create account": "Még nincs fiókod? <link>Regisztrálj</link>",
+    "Welcome": "Üdvözlünk",
+    "Unable to register": "Sikeretelen regisztráció!",
+    "Account exist, or invalid password": "Vagy már létezik a fiók, vagy helytelen jelszót adtál meg.",
+    "Create an account to get started": "Hozz létre egy fiókot a folytatáshoz",
+    "Confirm Password": "Jelszó megerősítése",
+    "Confirm your password": "Ismételd meg a jelszavad",
+    "Sign Up": "Regisztráció",
+    "Accept terms and conditions": "Elolvastam és elfogadom az <terms>ÁSzF</terms> és <privacy>Adatkezelés</privacy>ről szóló dokumentumokban foglaltakat",
+    "Already have account": "Már van fiókod? <link>Jelentkezz be</link>"
   }
 }

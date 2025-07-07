@@ -4,12 +4,14 @@ import { FormEvent, useState } from "react";
 import { Button, Input, Form, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
-import { Link } from "@/components/ui/link";
-import { useAuth } from "@/shared/auth";
 import { Logo } from "@/components/ui/logo";
+import { Link } from "@/components/ui/link";
+import { useAuth } from "@/hooks/auth";
 
 export default function Component() {
+  const t = useTranslations("AuthPages");
   const queryParams = useSearchParams();
   const { signIn } = useAuth();
   const [isVisible, setIsVisible] = useState(false);
@@ -27,7 +29,7 @@ export default function Component() {
 
     signIn("password", formData).catch((_) => {
       addToast({
-        description: "Login failed",
+        description: t("Login failed"),
         color: "danger",
       });
       setSubmitting(false);
@@ -38,10 +40,10 @@ export default function Component() {
     <div className="flex h-full w-full items-center justify-center">
       <div className="flex w-full max-w-sm flex-col gap-4 rounded-large">
         <div className="flex flex-col items-center">
-          <Logo />
-          <p className="text-xl font-medium">Welcome Back</p>
+          <Logo size={128} />
+          <p className="text-xl font-medium">{t("Welcome Back")}</p>
           <p className="text-small text-default-500">
-            Log in to your account to continue
+            {t("Log in to your account to continue")}
           </p>
         </div>
         <Form
@@ -57,10 +59,11 @@ export default function Component() {
               inputWrapper:
                 "rounded-b-none data-[hover=true]:z-10 group-data-[focus-visible=true]:z-10",
             }}
-            label="Email Address"
+            label={t("Email Address")}
             name="email"
-            placeholder="Enter your email"
+            placeholder={t("Enter your email")}
             type="email"
+            value="test@test.com"
             variant="bordered"
           />
           <Input
@@ -84,9 +87,9 @@ export default function Component() {
                 )}
               </button>
             }
-            label="Password"
+            label={t("Password")}
             name="password"
-            placeholder="Enter your password"
+            placeholder={t("Enter your password")}
             type={isVisible ? "text" : "password"}
             variant="bordered"
           />
@@ -107,7 +110,7 @@ export default function Component() {
             isLoading={isSubmitting}
             type="submit"
           >
-            Sign In
+            {t("Sign In")}
           </Button>
         </Form>
         {/*
@@ -127,10 +130,13 @@ export default function Component() {
         </div>
         */}
         <p className="text-center text-small">
-          Need to create an account?&nbsp;
-          <Link href="/auth/signup" size="sm">
-            Sign Up
-          </Link>
+          {t.rich("Create account", {
+            link: (chunks) => (
+              <Link href="/auth/register" size="sm">
+                {chunks}
+              </Link>
+            ),
+          })}
         </p>
       </div>
     </div>

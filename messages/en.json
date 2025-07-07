@@ -46,10 +46,37 @@
       "2": "Click here and get to know the foundation yourself."
     }
   },
+  "ProfileIcon": {
+    "Profile Actions": "Profile Actions",
+    "Signed in as": "Signed in as {email}",
+    "Settings": "Settings",
+    "Log Out": "Log Out",
+    "Sign In": "Sign In"
+  },
   "Footer": {
     "All rights reserved": "©{year} Kiss-Hanzsa Ltd. - All rights reserved.",
     "Terms": "Terms and Conditions",
     "Privacy": "Privacy",
     "Cookies": "Cookies"
+  },
+  "AuthPages": {
+    "Login failed": "Login failed",
+    "Welcome Back": "Welcome Back",
+    "Log in to your account to continue": "Log in to your account to continue",
+    "Email Address": "Email Address",
+    "Enter your email": "Enter your email",
+    "Password": "Password",
+    "Enter your password": "Enter your password",
+    "Sign In": "Sign In",
+    "Create account": "Need to create an account? <link>Sign Up</link>",
+    "Welcome": "Welcome",
+    "Unable to register": "Unable to register!",
+    "Account exist, or invalid password": "Either the account already exist, or the password is invalid.",
+    "Create an account to get started": "Create an account to get started",
+    "Confirm Password": "Confirm Password",
+    "Confirm your password": "Confirm your password",
+    "Sign Up": "Sign Up",
+    "Accept terms and conditions": "I agree with the <terms>Terms</terms> and <privacy> Privacy Policy </privacy>",
+    "Already have account": "Already have an account? <link>Log In</link>"
   }
 }

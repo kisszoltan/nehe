@@ -3,12 +3,18 @@
 import { useState } from "react";
 import { Button, Input, Checkbox, Form, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
+import { useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 import { Link } from "@/components/ui/link";
-import { useAuth } from "@/shared/auth";
 import { Logo } from "@/components/ui/logo";
+import { useAuth } from "@/hooks/auth";
 
 export default function Component() {
+  const t = useTranslations("AuthPages");
+  const params = useSearchParams();
+  const [email] = useState(params.get("email") ?? "");
+
   const { signIn } = useAuth();
   const [agreed, setAgreed] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -26,9 +32,8 @@ export default function Component() {
       .catch(() =>
         addToast({
           color: "danger",
-          title: "Unable to register!",
-          description:
-            "Either the account already exist, or the password is invalid.",
+          title: t("Unable to register"),
+          description: t("Account exist, or invalid password"),
         }),
       )
       .finally(() => setSubmitting(false));
@@ -38,10 +43,10 @@ export default function Component() {
     <div className="flex h-full w-full items-center justify-center">
       <div className="flex w-full max-w-sm flex-col gap-4 rounded-large">
         <div className="flex flex-col items-center">
-          <Logo />
-          <p className="text-xl font-medium">Welcome</p>
+          <Logo size={128} />
+          <p className="text-xl font-medium">{t("Welcome")}</p>
           <p className="text-small text-default-500">
-            Create an account to get started
+            {t("Create an account to get started")}
           </p>
         </div>
         <Form className="flex flex-col gap-3" onSubmit={handleSubmit}>
@@ -54,10 +59,11 @@ export default function Component() {
                 inputWrapper:
                   "rounded-b-none data-[hover=true]:z-10 group-data-[focus-visible=true]:z-10",
               }}
-              label="Email Address"
+              label={t("Email Address")}
               name="email"
-              placeholder="Enter your email"
+              placeholder={t("Enter your email")}
               type="email"
+              value={email}
               variant="bordered"
             />
             <Input
@@ -83,9 +89,9 @@ export default function Component() {
                   )}
                 </button>
               }
-              label="Password"
+              label={t("Password")}
               name="password"
-              placeholder="Enter your password"
+              placeholder={t("Enter your password")}
               type={isVisible ? "text" : "password"}
               variant="bordered"
             />
@@ -110,9 +116,9 @@ export default function Component() {
                   )}
                 </button>
               }
-              label="Confirm Password"
+              label={t("Confirm Password")}
               name="confirmPassword"
-              placeholder="Confirm your password"
+              placeholder={t("Confirm your password")}
               type={isVisible ? "text" : "password"}
               variant="bordered"
             />
@@ -125,14 +131,18 @@ export default function Component() {
             size="sm"
             onValueChange={setAgreed}
           >
-            I agree with the&nbsp;
-            <Link href="/legal/terms" size="sm">
-              Terms
-            </Link>
-            &nbsp; and&nbsp;
-            <Link href="/legal/privacy" size="sm">
-              Privacy Policy
-            </Link>
+            {t.rich("Accept terms and conditions", {
+              terms: (chunks) => (
+                <Link href="/legal/terms" size="sm">
+                  {chunks}
+                </Link>
+              ),
+              privacy: (chunks) => (
+                <Link href="/legal/privacy" size="sm">
+                  {chunks}
+                </Link>
+              ),
+            })}
           </Checkbox>
           <Button
             className="w-full"
@@ -140,7 +150,7 @@ export default function Component() {
             isDisabled={!agreed || isSubmitting}
             type="submit"
           >
-            Sign Up
+            {t("Sign Up")}
           </Button>
         </Form>
         {/*
@@ -159,10 +169,13 @@ export default function Component() {
         </div>
         */}
         <p className="text-center text-small">
-          Already have an account?&nbsp;
-          <Link href="/auth/signin" size="sm">
-            Log In
-          </Link>
+          {t.rich("Already have account", {
+            link: (chunks) => (
+              <Link href="/auth/login" size="sm">
+                {chunks}
+              </Link>
+            ),
+          })}
         </p>
       </div>
     </div>

@@ -1,10 +1,10 @@
 "use client";
 
-import { Spinner } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { Suspense, useEffect } from "react";
 
-import { useAuth } from "@/shared/auth";
+import Loading from "@/app/loading";
+import { useAuth } from "@/hooks/auth";
 
 export default function UserLayout({
   children,
@@ -15,22 +15,14 @@ export default function UserLayout({
   const { isLoading, isAuthenticated } = useAuth();
 
   useEffect(() => {
-    if (!isLoading && isAuthenticated) router.replace("/");
+    if (!isLoading && isAuthenticated()) router.replace("/dashboard");
   }, [isAuthenticated, isLoading]);
 
   return isLoading ? (
-    <Loading />
+    Loading()
   ) : (
-    <Suspense fallback={<Loading />}>
+    <Suspense fallback={Loading()}>
       <section className="max-w-7xl h-full mx-auto">{children}</section>
     </Suspense>
   );
 }
-
-const Loading = () => {
-  return (
-    <div className="w-full h-full flex items-center justify-center">
-      <Spinner size="lg" />
-    </div>
-  );
-};

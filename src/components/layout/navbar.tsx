@@ -15,6 +15,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
+import { ProfileIcon } from "../widgets/profile-icon";
+
 import { SearchInput } from "@/components/widgets/search-input";
 import { Donate } from "@/components/widgets/donate";
 import { Logo } from "@/components/ui/logo";
@@ -88,6 +90,9 @@ export const Navbar = () => {
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Donate />
+        </NavbarItem>
+        <NavbarItem className="hidden md:flex">
+          <ProfileIcon />
         </NavbarItem>
       </NavbarContent>
 
