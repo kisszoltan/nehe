@@ -1,4 +1,4 @@
-import { title } from "./primitives";
+import { title } from "@/components/ui/primitives";
 
 type ColorType =
   | "violet"

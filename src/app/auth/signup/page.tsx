@@ -5,7 +5,7 @@ import { Button, Input, Checkbox, Link, Form, addToast } from "@heroui/react";
 import { Icon } from "@iconify/react";
 
 import { useAuth } from "@/shared/auth";
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/ui/logo";
 
 export default function Component() {
   const { signIn } = useAuth();

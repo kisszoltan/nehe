@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "@heroui/react";
 
-import { message, title } from "@/components/primitives";
+import { message, title } from "@/components/ui/primitives";
 
 export default function NotFound() {
   const router = useRouter();

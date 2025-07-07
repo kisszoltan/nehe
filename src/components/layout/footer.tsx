@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import LocaleSwitch from "./locale-switch";
+import LocaleSwitch from "@/components/widgets/locale-switch";
 
 export const Footer: React.FC = () => {
   const t = useTranslations("Footer");

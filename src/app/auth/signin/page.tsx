@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import { useSearchParams } from "next/navigation";
 
 import { useAuth } from "@/shared/auth";
-import { Logo } from "@/components/logo";
+import { Logo } from "@/components/ui/logo";
 
 export default function Component() {
   const queryParams = useSearchParams();

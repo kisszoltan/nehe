@@ -17,12 +17,11 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 
-import { SearchInput } from "./search-input";
-import { Donate } from "./donate";
-import { Logo } from "./logo";
-
+import { SearchInput } from "@/components/widgets/search-input";
+import { Donate } from "@/components/widgets/donate";
+import { Logo } from "@/components/ui/logo";
 import { siteConfig } from "@/shared/site";
-import { ThemeSwitch } from "@/components/theme-switch";
+import { ThemeSwitch } from "@/components/widgets/theme-switch";
 
 export const Navbar = () => {
   const path = usePathname();

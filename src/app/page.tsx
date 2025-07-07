@@ -6,8 +6,8 @@ import { Icon } from "@iconify/react";
 import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/shared/site";
-import { subtitle } from "@//components/primitives";
-import { HighlightTitle } from "@/components/highlight-title";
+import { subtitle } from "@/components/ui/primitives";
+import { HighlightTitle } from "@/components/ui/highlight-title";
 
 export default function Home() {
   const t = useTranslations("HomePage");
